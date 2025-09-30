@@ -39,7 +39,7 @@ const App = () => {
 
   const handleCreate = async () => {
     try {
-      const newStudentId = await studentService.createStudent({
+      await studentService.createStudent({
         name: "New Student",
         email: "mail@lol.com",
         phone: "1234567890",

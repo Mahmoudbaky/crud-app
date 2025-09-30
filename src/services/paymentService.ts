@@ -7,10 +7,6 @@ import {
   getDoc,
   updateDoc,
   deleteDoc,
-  query,
-  where,
-  orderBy,
-  limit,
 } from "firebase/firestore";
 import { type Course } from "../types";
 
