@@ -8,8 +8,13 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/students" element={<Students />} />
+<<<<<<< HEAD
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+=======
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Signup />} />
+>>>>>>> 7e7ca8ce27f123636ac5c6a1fcfb00c981888a08
       </Routes>
     </BrowserRouter>
   )

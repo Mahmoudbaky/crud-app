@@ -26,7 +26,11 @@ function Signup() {
 
     setError("");
     alert("✅ Signup successful! You can now log in.");
+<<<<<<< HEAD
     navigate("/students");
+=======
+    navigate("/login");
+>>>>>>> 7e7ca8ce27f123636ac5c6a1fcfb00c981888a08
   };
 
   return (
