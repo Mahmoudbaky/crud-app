@@ -30,7 +30,11 @@ function Login() {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-yellow-400 to-yellow-500">
       <div className="bg-white shadow-lg rounded-2xl p-8 w-96">
         <h2 className="text-2xl font-bold text-center mb-2">CRUD OPERATIONS</h2>
+<<<<<<< HEAD
+        <p className="text-center text-gray-500 mb-6">Log in to your account</p>
+=======
         <p className="text-center text-gray-500 mb-6">Sign in to your account</p>
+>>>>>>> 7e7ca8ce27f123636ac5c6a1fcfb00c981888a08
 
         <input
           type="email"
@@ -60,7 +64,11 @@ function Login() {
         <p className="text-sm text-center mt-4">
           Don’t have an account?{" "}
           <span
+<<<<<<< HEAD
+            onClick={() => navigate("/signup")}
+=======
             onClick={() => navigate("/")}
+>>>>>>> 7e7ca8ce27f123636ac5c6a1fcfb00c981888a08
             className="text-yellow-600 font-semibold cursor-pointer"
           >
             Sign Up

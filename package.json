@@ -8,13 +8,20 @@
 <<<<<<< HEAD
     "build": "vite build",
 =======
+<<<<<<< HEAD
+    "build": "vite build",
+=======
     "build": "tsc -b && vite build",
 >>>>>>> 4447c78e88b72d7e6dc902e662ecb48725ae5246
+>>>>>>> 7e7ca8ce27f123636ac5c6a1fcfb00c981888a08
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e7ca8ce27f123636ac5c6a1fcfb00c981888a08
     "@tailwindcss/vite": "^4.1.14",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -30,6 +37,8 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
+<<<<<<< HEAD
+=======
 =======
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.13",
@@ -56,6 +65,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.44.0",
 >>>>>>> 4447c78e88b72d7e6dc902e662ecb48725ae5246
+>>>>>>> 7e7ca8ce27f123636ac5c6a1fcfb00c981888a08
     "vite": "^7.1.7"
   }
 }
