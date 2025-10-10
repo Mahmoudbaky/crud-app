@@ -1,36 +1,33 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
-function Login() {
+function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { signup } = useAuth();
 
-  const handleLogin = () => {
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-
-    const user = users.find((u) => u.email === email);
-
-    if (!user) {
-      setError("❌ Email not registered. Please sign up first.");
-      return;
-    }
-    if (user.password !== password) {
-      setError("❌ Incorrect password.");
+  const handleSignup = async () => {
+    if (!email || !password) {
+      setError("❌ All fields are required.");
       return;
     }
 
-    localStorage.setItem("loggedInUser", email);
-    setError("");
-    navigate("/students");
+    try {
+      await signup(email, password);
+      navigate("/login");
+    } catch (error) {
+      setError("❌ Signup failed. Please try again.");
+    }
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-yellow-400 to-yellow-500">
       <div className="bg-white shadow-lg rounded-2xl p-8 w-96">
         <h2 className="text-2xl font-bold text-center mb-2">CRUD OPERATIONS</h2>
-        <p className="text-center text-gray-500 mb-6">Sign in to your account</p>
+        <p className="text-center text-gray-500 mb-6">Create your account</p>
 
         <input
           type="email"
@@ -50,20 +47,19 @@ function Login() {
         {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
 
         <button
-          onClick={handleLogin}
+          onClick={handleSignup}
           className="w-full bg-yellow-500 text-white font-semibold py-2 rounded-lg hover:bg-yellow-600 transition"
-         
         >
-          LOG IN
+          SIGN UP
         </button>
 
         <p className="text-sm text-center mt-4">
-          Don’t have an account?{" "}
+          Already have an account?{" "}
           <span
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/login")}
             className="text-yellow-600 font-semibold cursor-pointer"
           >
-            Sign Up
+            Log In
           </span>
         </p>
       </div>
@@ -71,4 +67,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

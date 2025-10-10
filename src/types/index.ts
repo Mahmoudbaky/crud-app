@@ -4,9 +4,10 @@ export type Student = {
   email: string;
   phone: string;
   enrollNumber: string;
-  admissionDate: Date;
-  createdAt: Date;
-  updatedAt: Date;
+  dateOfAdmission: string;
+  avatar: string;
+  createdAt?: Date;
+  updatedAt?: Date;
 };
 
 export type Course = {
